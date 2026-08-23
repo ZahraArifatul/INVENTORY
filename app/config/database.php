@@ -1,9 +1,9 @@
 <?php
 class Database {
     private $host = "localhost";
+    private $db_name = "db_inventory";
     private $user = "root";
     private $pass = "";
-    private $db_name = "inventory";
     protected $dbh;
 
     public function __construct() {
