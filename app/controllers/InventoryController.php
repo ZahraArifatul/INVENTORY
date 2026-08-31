@@ -4,7 +4,6 @@ class InventoryModel {
     private $db;
 
     public function __construct() {
-        // Sesuaikan koneksi database kamu jika perlu
         try {
             $this->db = new PDO("mysql:host=localhost;dbname=inventory", "root", "");
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -110,7 +109,7 @@ class InventoryModel {
         return $stmt->execute();
     }
 
-    // 10. Tambah vendor baru (SUDAH DIPERBAIKI SESUAI STRUKTUR DB)
+    // 10. Tambah vendor baru
     public function insertVendor($nama_vendor, $kontak_vendor, $nama_barang_vendor) {
         $query = "INSERT INTO vendor (nama_vendor, kontak_vendor, nama_barang_vendor) 
                   VALUES (:nama_vendor, :kontak_vendor, :nama_barang_vendor)";
