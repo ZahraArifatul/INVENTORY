@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const outOfStockItems = JSON.parse(alertDataContainer.getAttribute("data-items"));
         
         if (outOfStockItems.length > 0) {
-            alert(" PERINGATAN SISTEM INVENTORY:\n\nStok untuk barang berikut telah HABIS (0):\n- " + 
+            alert(" PERINGATAN SISTEM INVENTORY:\n\nStok pada barang berikut telah HABIS (0):\n- " + 
                   outOfStockItems.join("\n- ") + 
                   "\n\nHarap segera hubungi vendor terkait untuk melakukan restock!");
         }
